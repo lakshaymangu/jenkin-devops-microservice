@@ -6,7 +6,7 @@ pipeline {
 			steps{
 				//sh 'node --version'
 				echo "Build"
-				echo "BUILD_ID - $env.BUIL_ID"
+				echo "BUILD_ID - $env.BUILD_ID"
 				echo "BUILD_NUMBER - $env.BUILD_NUMBER"
 				echo "JOB_NAME - $env.JOB_NAME"
 				echo "BUILD_TAG - $env.BUILD_TAG"
