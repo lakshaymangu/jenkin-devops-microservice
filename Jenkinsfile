@@ -1,6 +1,13 @@
 pipeline {
 	agent any
 	//agent { docker{ image 'node:latest' } }
+	
+	environment{
+		dockerHome = tool 'myDocker'
+		mavenHome = tool 'myMaven'
+		PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
+	}
+	
 	stages {
 		stage('Build'){
 			steps{
