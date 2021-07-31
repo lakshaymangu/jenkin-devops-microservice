@@ -53,8 +53,10 @@ pipeline {
 		}
 		stage('Push Docker Image'){
 			steps{
-				dockerImage.push()
+				script{
+					dockerImage.push()
 				dockerImage.push('latest')
+				}
 			}
 		}
 	}
